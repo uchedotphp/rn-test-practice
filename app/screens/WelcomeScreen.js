@@ -1,9 +1,11 @@
 import { ImageBackground, StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
+import AppButton from "../components/button";
 
 export default function WelcomeScreen() {
   return (
     <ImageBackground
+      blurRadius={10}
       source={require("../assets/background.jpg")}
       style={styles.background}
     >
@@ -11,12 +13,21 @@ export default function WelcomeScreen() {
         <Image source={require("../assets/logo-red.png")} style={styles.logo} />
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
-      
-      <View style={styles.loginButton}>
-        <Text>Login</Text>
-      </View>
-      <View style={styles.registerButton}>
-        <Text>Register</Text>
+
+      <View style={styles.buttonsContainer}>
+        <View style={styles.loginButton}>
+          <AppButton textStyle={{ textTransform: "uppercase" }}>
+            Login
+          </AppButton>
+        </View>
+        <View style={styles.registerButton}>
+          <AppButton
+            variant="secondary"
+            textStyle={{ textTransform: "uppercase" }}
+          >
+            Register
+          </AppButton>
+        </View>
       </View>
     </ImageBackground>
   );
@@ -37,14 +48,18 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     paddingVertical: 20,
   },
+  buttonsContainer: {
+    paddingHorizontal: 20,
+    marginBottom: 40,
+    width: "100%",
+  },
   loginButton: {
     width: "100%",
-    height: 70,
-    backgroundColor: "#fc5c65",
+    height: 60,
   },
   registerButton: {
+    marginTop: 30,
     width: "100%",
-    height: 70,
-    backgroundColor: "#4ecdc4",
+    height: 60,
   },
 });
