@@ -6,11 +6,13 @@ import {
   StatusBar,
   Platform,
 } from "react-native";
-import WelcomeScreen from "./screens/WelcomeScreen";
+// import WelcomeScreen from "./screens/WelcomeScreen";
+import MessagesScreen from "./screens/MessagesScreen";
 
 export default function HomeScreen() {
   return (
-    <WelcomeScreen />
+    // <WelcomeScreen />
+    <MessagesScreen />
   );
 }
 

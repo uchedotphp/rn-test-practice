@@ -5,7 +5,7 @@ import AppButton from "../components/button";
 export default function WelcomeScreen() {
   return (
     <ImageBackground
-      blurRadius={10}
+      blurRadius={5}
       source={require("../assets/background.jpg")}
       style={styles.background}
     >
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     height: 60,
   },
   registerButton: {
-    marginTop: 30,
+    marginTop: 10,
     width: "100%",
     height: 60,
   },
