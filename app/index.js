@@ -10,14 +10,11 @@ import {
 import MessagesScreen from "./screens/MessagesScreen";
 
 export default function HomeScreen() {
-  return (
-    // <WelcomeScreen />
-    <MessagesScreen />
-  );
+  return <MessagesScreen />;
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
 });

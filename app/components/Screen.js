@@ -1,6 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Constants from "expo-constants";
+import colors from "../config/colors";
 
 export default function Screen({ children }) {
   // return <SafeAreaView style={styles.screen}>{children}</SafeAreaView>;
